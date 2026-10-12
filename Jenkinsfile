@@ -11,8 +11,6 @@ pipeline {
                 bat 'npm install'
             }
         }
-    }
-
     
         stage('Execucao dos testes') {
             steps {
@@ -20,7 +18,7 @@ pipeline {
             }
         }
     }
-
+}
 
 
 
