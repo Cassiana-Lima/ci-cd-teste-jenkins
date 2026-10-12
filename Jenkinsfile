@@ -9,6 +9,7 @@ pipeline {
         stage('Instalacao das dependencias') {
             steps {
                 bat 'npm install'
+                bat 'npx cypress verify'
             }
         }
     
