@@ -19,6 +19,7 @@ pipeline {
     
         stage('Execucao dos testes') {
             steps {
+                bat 'npx cypress install'
                 bat 'npm test'
             }
         }
