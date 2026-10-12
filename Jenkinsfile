@@ -5,10 +5,6 @@ pipeline {
         nodejs 'NodeJS'
     }
 
-    environment {
-        CYPRESS_CACHE_FOLDER = "${WORKSPACE}\\.cypress-cache"
-    }
-
     stages {
         stage('Instalacao das dependencias') {
             steps {
@@ -19,7 +15,6 @@ pipeline {
     
         stage('Execucao dos testes') {
             steps {
-                bat 'npx cypress install'
                 bat 'npm test'
             }
         }
