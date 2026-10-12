@@ -5,6 +5,10 @@ pipeline {
         nodejs 'NodeJS'
     }
 
+    environment {
+        CYPRESS_CACHE_FOLDER = "${WORKSPACE}\\.cypress-cache"
+    }
+
     stages {
         stage('Instalacao das dependencias') {
             steps {
