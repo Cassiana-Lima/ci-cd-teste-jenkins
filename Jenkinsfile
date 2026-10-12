@@ -27,7 +27,7 @@ pipeline {
             echo 'Build e testes executados com sucesso'
         }
 
-        feilure {
+        failure {
             echo 'Falha na execucao do pipeline'
         }
     }
