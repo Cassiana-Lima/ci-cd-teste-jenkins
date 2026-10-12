@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools{
+        nodejs 'NodeJS'
+    }
+
     stages {
         stage('Instalacao das dependencias') {
             steps {
