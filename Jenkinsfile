@@ -15,9 +15,17 @@ pipeline {
         }
     
         stage('Execucao dos testes') {
-            steps {
-                echo 'Executando os testes'
-                bat 'npm test'
+            parallel {
+                stage('Teste no Chrome') {
+                    steps {
+                        bat 'npm run test-chrome' 
+                    }
+                }
+                stage('Teste no Electron') {
+                    steps {
+                        bat 'npx cypress run --browser electron' 
+                    }
+                }
             }
         }
     }

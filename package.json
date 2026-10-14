@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run --browser chrome",
+    "test-chrome": "npx cypress run --browser chrome",
     "report": "npx allure serve allure-results",
     "report:generate": "npx allure generate allure-results --clean -o allure-report"
   },
