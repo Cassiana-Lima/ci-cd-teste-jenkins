@@ -16,19 +16,24 @@ pipeline {
     
         stage('Execucao dos testes') {
             parallel {
-                stage('Teste no Chrome') {
+                stage('Testes da suite 1') {
                     steps {
-                        bat 'npm run test-chrome' 
+                        bat 'npm run test-suite-1' 
                     }
                 }
-                stage('Teste no Electron') {
+                stage('Teste da suite 2') {
                     steps {
-                        bat 'npx cypress run --browser electron' 
+                        bat 'npm run test-suite-2' 
+                    }
+                }
+
+                stage('Teste da suite 2') {
+                    steps {
+                        bat 'npm run test-suite-' 
                     }
                 }
             }
         }
-    }
 
     post {
         success {
