@@ -34,7 +34,7 @@ pipeline {
                 }
             }
         }
-
+    }
     post {
         success {
             echo 'Build e testes executados com sucesso'
