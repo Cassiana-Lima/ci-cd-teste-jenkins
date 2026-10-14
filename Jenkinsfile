@@ -27,9 +27,9 @@ pipeline {
                     }
                 }
 
-                stage('Teste da suite 2') {
+                stage('Teste da suite 3') {
                     steps {
-                        bat 'npm run test-suite-' 
+                        bat 'npm run test-suite-3' 
                     }
                 }
             }
